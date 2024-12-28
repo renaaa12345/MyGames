@@ -85,46 +85,4 @@ class CatchApp(App):
 
 if __name__ == '__main__':
     CatchApp().run()
-"""
 
-Sure! Let’s go through your Kivy code line by line to explain its functionality and structure.
-
-python
-Copy code
-from kivy.app import App
-from kivy.uix.widget import Widget
-from kivy.core.window import Window
-from kivy.uix.label import Label
-from kivy.clock import Clock
-from kivy.vector import Vector
-from random import randint
-from kivy.graphics import Rectangle, Color
-Imports: These lines import various modules and classes from the Kivy library and Python standard library.
-App: The base class for creating Kivy applications.
-Widget: A basic UI element; you can create your custom widgets by extending this class.
-Window: Handles the application window.
-Label: A widget for displaying text.
-Clock: Used for scheduling functions to be called at regular intervals.
-Vector: A utility class for handling 2D vectors (not used in the code but can be useful for movement and collision detection).
-randint: A function from the random module that generates a random integer; used to spawn falling objects at random horizontal positions.
-Rectangle and Color: Classes for drawing shapes and setting colors in the Kivy graphics context.
-Class Definition
-python
-Copy code
-class CatchGame(Widget):
-CatchGame: This is a custom class that extends Widget. It represents the main game interface where the game logic resides.
-python
-Copy code
-    def __init__(self, **kwargs):
-        super().__init__(**kwargs)
-__init__ Method: The constructor for the CatchGame class, called when an instance is created. It initializes the widget and its properties.
-super().__init__(**kwargs): Calls the parent class's constructor to ensure proper initialization.
-Creating the Basket
-python
-Copy code
-        self.basket = Widget(size=(100, 20))
-        self.basket.pos = (Window.width / 2 - 50, 50)
-Basket: Creates a new Widget to represent the player's basket. The size is set to 100 pixels wide and 20 pixels high.
-self.basket.pos: Sets the basket's position at the center of the window, slightly adjusted to the left to account for its width.
-
-"""
